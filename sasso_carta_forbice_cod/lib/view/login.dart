@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Column(
         children: [
           Image(
-            image: AssetImage("assets/images/morra.jpg"),
+            image: AssetImage("assets/images/morra.jpg"), 
             fit: BoxFit.cover,
           ),
           Padding(
