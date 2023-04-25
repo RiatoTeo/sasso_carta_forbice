@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _usernameController = TextEditingController();
-  TextEditingController gameController = TextEditingController();
+  // TextEditingController gameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,17 +51,17 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              textInputAction: TextInputAction.done,
-              controller: gameController,
-              decoration: InputDecoration(
-                hintText: "Numero parite",
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          //   child: TextField(
+          //     keyboardType: TextInputType.number,
+          //     textInputAction: TextInputAction.done,
+          //     controller: gameController,
+          //     decoration: InputDecoration(
+          //       hintText: "Numero parite",
+          //     ),
+          //   ),
+          // ),
           SizedBox(height: 24.0),
           SizedBox(
             height: 65,
@@ -73,16 +73,17 @@ class _LoginPageState extends State<LoginPage> {
             ),
             onPressed: () {
               String username = _usernameController.text;
-              int gameLength = int.parse(gameController.text);
+              // int gameLength = int.parse(gameController.text);
               if (username.isEmpty) {
                 return;
               }
 
-              if (gameController.text.isEmpty) {
-                return;
-              }
+              // if (gameController.text.isEmpty) {
+              //   return;
+              // }
 
-              User user = User(username, gameLength);
+              User user = User(username);
+              // User user = User(username, gameLength);
               sendData(user);
             },
             child: Text("GIOCA"),
@@ -93,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void sendData(User user) {
-    int gameLength = int.parse(gameController.text);
+    // int gameLength = int.parse(gameController.text);
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => GamePage(user)));
   }

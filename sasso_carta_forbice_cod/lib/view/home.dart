@@ -76,12 +76,12 @@ class _GamePageState extends State<GamePage> {
         }));
         detector.startListening();
 
-        if (playerWins + computerWins == user.gameLength) {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ScoreBoard(playerWins, computerWins)));
-        }
+        // if (playerWins + computerWins == user.gameLength) {
+        //   Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
+        // }
       },
       child: Image(
         image: AssetImage("assets/images/scissors.png"),
@@ -108,12 +108,12 @@ class _GamePageState extends State<GamePage> {
           detector.stopListening();
         }));
         detector.startListening();
-        if (playerWins + computerWins == user.gameLength) {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ScoreBoard(playerWins, computerWins)));
-        }
+        // if (playerWins + computerWins == user.gameLength) {
+        //   Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
+        // }
       },
       child: Image(
         image: AssetImage("assets/images/paper.png"),
@@ -140,12 +140,12 @@ class _GamePageState extends State<GamePage> {
           detector.stopListening();
         }));
         detector.startListening();
-        if (playerWins + computerWins == user.gameLength) {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ScoreBoard(playerWins, computerWins)));
-        }
+        // if (playerWins + computerWins == user.gameLength) {
+        //   Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
+        // }
       },
       child: image("assets/images/rock.png"),
     );
