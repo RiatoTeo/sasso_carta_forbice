@@ -11,6 +11,7 @@ class ScoreBoard extends StatefulWidget {
   _ScoreBoardState createState() {
     return _ScoreBoardState(this.playerWins, this.computerWins);
   }
+  
 }
 
 class _ScoreBoardState extends State<ScoreBoard> {
