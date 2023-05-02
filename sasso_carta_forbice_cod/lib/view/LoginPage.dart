@@ -23,43 +23,6 @@ class _LoginPageState extends State<LoginPage> {
 
   AppBar _getAppBar() {
     return AppBar(
-        //   backgroundColor: Colors.transparent,
-        //   elevation: 0,
-        //   title: Stack(
-        //     children: <Widget>[
-        //       Positioned(
-        //         child: Text(
-        //           "Sasso Carta Forbice",
-        //           style: TextStyle(
-        //             fontSize: 30,
-        //             foreground: Paint()
-        //               ..style = PaintingStyle.stroke
-        //               ..strokeWidth = 6
-        //               ..color = Colors.blue[900]!,
-        //             letterSpacing: 1.5,
-        //           ),
-        //         ),
-        //       ),
-        //       Text(
-        //         "Sasso Carta Forbice",
-        //         style: TextStyle(
-        //           color: Colors.white,
-        //           letterSpacing: 1.5,
-        //           fontFamily: 'Pacifico',
-        //           fontSize: 30.0,
-        //           shadows: [
-        //             Shadow(
-        //               blurRadius: 5.0,
-        //               color: Color.fromRGBO(0, 0, 0, 0.7),
-        //               offset: Offset(2.0, 2.0),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // );
-
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Center(
@@ -107,27 +70,6 @@ class _LoginPageState extends State<LoginPage> {
             image: AssetImage("assets/images/morra.jpg"),
             fit: BoxFit.cover,
           ),
-          // Padding(
-          //   padding: const EdgeInsets.all(16.0),
-          //   child: TextFormField(
-          //     controller: _usernameController,
-          //     textInputAction: TextInputAction.next,
-          //     decoration: InputDecoration(
-          //       hintText: "Username",
-          //     ),
-          //   ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          //   child: TextField(
-          //     keyboardType: TextInputType.number,
-          //     textInputAction: TextInputAction.done,
-          //     controller: gameController,
-          //     decoration: InputDecoration(
-          //       hintText: "Numero parite",
-          //     ),
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: TextFormField(
@@ -201,5 +143,5 @@ class _LoginPageState extends State<LoginPage> {
         context, MaterialPageRoute(builder: (context) => GamePage(user)));
   }
 }
-// "https://www.iconspng.com/images/rockpaperscissors/rockpaperscissors.jpg" login rasm asosiy
+
 

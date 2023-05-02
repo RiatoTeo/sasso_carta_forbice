@@ -85,7 +85,6 @@ class _GamePageState extends State<GamePage> {
       },
       child: Image(
         image: AssetImage("assets/images/forbiceimg.png"),
-        // image: AssetImage("assets/images/scissors.png"),
         fit: BoxFit.cover,
       ),
     );
@@ -118,7 +117,6 @@ class _GamePageState extends State<GamePage> {
       },
       child: Image(
         image: AssetImage("assets/images/cartaimg.png"),
-        // image: AssetImage("assets/images/paper.png"),
         fit: BoxFit.cover,
       ),
     );
@@ -150,7 +148,6 @@ class _GamePageState extends State<GamePage> {
         }
       },
       child: image("assets/images/sassoimg.png"),
-      // child: image("assets/images/rock.png"),
     );
   }
 
