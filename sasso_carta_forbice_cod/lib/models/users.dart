@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class User {
   String? username;
-  // int? gameLength;
+  int? gameLength;
 
-  User(this.username);
-  // User(this.username, this.gameLength);
+  User(this.username, this.gameLength);
 }

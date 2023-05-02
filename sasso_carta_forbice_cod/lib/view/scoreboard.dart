@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sasso_carta_forbice_cod/view/home.dart';
+import 'package:sasso_carta_forbice_cod/view/GamePage.dart';
 
 class ScoreBoard extends StatefulWidget {
   final int? playerWins;

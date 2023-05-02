@@ -1,4 +1,4 @@
-import 'package:sasso_carta_forbice_cod/view/login.dart';
+import 'package:sasso_carta_forbice_cod/view/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

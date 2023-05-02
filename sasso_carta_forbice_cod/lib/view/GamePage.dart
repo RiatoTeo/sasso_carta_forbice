@@ -27,7 +27,7 @@ class _GamePageState extends State<GamePage> {
   Widget build(BuildContext context) {
     print(_images['Sasso']);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -76,15 +76,16 @@ class _GamePageState extends State<GamePage> {
         }));
         detector.startListening();
 
-        // if (playerWins + computerWins == user.gameLength) {
-        //   Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
-        // }
+        if (playerWins + computerWins == user.gameLength) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ScoreBoard(playerWins, computerWins)));
+        }
       },
       child: Image(
-        image: AssetImage("assets/images/scissors.png"),
+        image: AssetImage("assets/images/forbiceimg.png"),
+        // image: AssetImage("assets/images/scissors.png"),
         fit: BoxFit.cover,
       ),
     );
@@ -108,15 +109,16 @@ class _GamePageState extends State<GamePage> {
           detector.stopListening();
         }));
         detector.startListening();
-        // if (playerWins + computerWins == user.gameLength) {
-        //   Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
-        // }
+        if (playerWins + computerWins == user.gameLength) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ScoreBoard(playerWins, computerWins)));
+        }
       },
       child: Image(
-        image: AssetImage("assets/images/paper.png"),
+        image: AssetImage("assets/images/cartaimg.png"),
+        // image: AssetImage("assets/images/paper.png"),
         fit: BoxFit.cover,
       ),
     );
@@ -140,14 +142,15 @@ class _GamePageState extends State<GamePage> {
           detector.stopListening();
         }));
         detector.startListening();
-        // if (playerWins + computerWins == user.gameLength) {
-        //   Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //           builder: (context) => ScoreBoard(playerWins, computerWins)));
-        // }
+        if (playerWins + computerWins == user.gameLength) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ScoreBoard(playerWins, computerWins)));
+        }
       },
-      child: image("assets/images/rock.png"),
+      child: image("assets/images/sassoimg.png"),
+      // child: image("assets/images/rock.png"),
     );
   }
 
@@ -202,9 +205,9 @@ class _GamePageState extends State<GamePage> {
 
       return "Hai vinto!";
     } else {
-      debugPrint("Il dispositivo ha vinto!");
+      debugPrint("Il Computer ha vinto!");
       computerWins++;
-      return "Il dispositivo ha vinto!";
+      return "Il Computer ha vinto!";
     }
   }
 
@@ -237,7 +240,7 @@ class _GamePageState extends State<GamePage> {
     return Column(
       children: [
         Text(
-          "Dispositivo",
+          "Computer",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         SizedBox(
@@ -247,25 +250,28 @@ class _GamePageState extends State<GamePage> {
         Padding(
           padding: const EdgeInsets.all(24.0),
           child: Text(
-            "Risultati: $gameResult",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            "Player: $gameResult",
+            style: TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
           ),
         ),
         RotatedBox(
             quarterTurns: 2,
             child: _getImage(_images[playerSelection].toString())),
+        SizedBox(
+          height: 16.0, // imposta il margine superiore a 16 punti
+        ),
         Text(
           user.username!,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black, fontFamily: 'Roboto'),
         )
       ],
     );
   }
 
   Map<String, String> _images = {
-    "Sasso": "assets/images/rock.png",
-    "Carta": "assets/images/paper.png",
-    "Forbici": "assets/images/scissors.png",
+    "Sasso": "assets/images/sassoimg.png",
+    "Carta": "assets/images/cartaimg.png",
+    "Forbici": "assets/images/forbiceimg.png",
     "Niente": "assets/images/semp.png",
   };
 
